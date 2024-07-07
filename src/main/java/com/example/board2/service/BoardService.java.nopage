@@ -1,7 +1,7 @@
 package com.example.board2.service;
 
 import java.io.File;
-// import java.util.List;
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,7 +56,7 @@ public class BoardService {
     //     return boardRepository.findAll();
     // }
 
-    public Page<Board> boardList(Pageable pageable) {
+    public Page<Board> boardList() {
         return boardRepository.findAll(pageable);
     }
 
@@ -64,8 +64,5 @@ public class BoardService {
         return boardRepository.findById(id).get();
     }
 
-    public Page<Board> boardSearchList(String searchKeyword, Pageable pageable) {
-        return boardRepository.findByTitleContaining(searchKeyword, pageable);
-    }
 
 }

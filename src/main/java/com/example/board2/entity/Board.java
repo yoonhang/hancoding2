@@ -23,4 +23,8 @@ public class Board {    //테이블 이름
 
     private String content;
 
+    private String filename;
+
+    private String filepath;
+    
 }
